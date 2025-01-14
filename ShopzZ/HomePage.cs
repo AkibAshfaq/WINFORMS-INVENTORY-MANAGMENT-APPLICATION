@@ -22,12 +22,12 @@ namespace AmaZon
         {
             if(!panalsize)
             {
-                panel1.Height += 50;
+                panel1.Height += 120;
                 panalsize = true;
             }
             else
             {
-                panel1.Height -= 50;
+                panel1.Height -= 120;
                 panalsize = false; 
             }
         }

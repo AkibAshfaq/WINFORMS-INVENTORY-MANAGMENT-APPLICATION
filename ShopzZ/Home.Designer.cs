@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.groceries = new System.Windows.Forms.TabPage();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel17 = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
@@ -82,7 +82,7 @@
             this.panel32 = new System.Windows.Forms.Panel();
             this.button61 = new System.Windows.Forms.Button();
             this.button62 = new System.Windows.Forms.Button();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.electronics = new System.Windows.Forms.TabPage();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.Addtocart = new System.Windows.Forms.Button();
@@ -135,7 +135,7 @@
             this.panel16 = new System.Windows.Forms.Panel();
             this.button30 = new System.Windows.Forms.Button();
             this.button31 = new System.Windows.Forms.Button();
-            this.tabPage7 = new System.Windows.Forms.TabPage();
+            this.homeaplience = new System.Windows.Forms.TabPage();
             this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel33 = new System.Windows.Forms.Panel();
             this.button63 = new System.Windows.Forms.Button();
@@ -190,7 +190,7 @@
             this.button94 = new System.Windows.Forms.Button();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.tabControl1.SuspendLayout();
-            this.tabPage1.SuspendLayout();
+            this.groceries.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
             this.panel17.SuspendLayout();
             this.panel18.SuspendLayout();
@@ -209,7 +209,7 @@
             this.panel30.SuspendLayout();
             this.panel31.SuspendLayout();
             this.panel32.SuspendLayout();
-            this.tabPage2.SuspendLayout();
+            this.electronics.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -228,7 +228,7 @@
             this.panel14.SuspendLayout();
             this.panel15.SuspendLayout();
             this.panel16.SuspendLayout();
-            this.tabPage7.SuspendLayout();
+            this.homeaplience.SuspendLayout();
             this.flowLayoutPanel3.SuspendLayout();
             this.panel33.SuspendLayout();
             this.panel34.SuspendLayout();
@@ -251,9 +251,9 @@
             // 
             // tabControl1
             // 
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Controls.Add(this.tabPage7);
+            this.tabControl1.Controls.Add(this.groceries);
+            this.tabControl1.Controls.Add(this.electronics);
+            this.tabControl1.Controls.Add(this.homeaplience);
             this.tabControl1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.tabControl1.Location = new System.Drawing.Point(3, 12);
             this.tabControl1.Name = "tabControl1";
@@ -261,16 +261,17 @@
             this.tabControl1.Size = new System.Drawing.Size(800, 436);
             this.tabControl1.TabIndex = 1;
             // 
-            // tabPage1
+            // groceries
             // 
-            this.tabPage1.Controls.Add(this.flowLayoutPanel2);
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(792, 410);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "tabPage1";
-            this.tabPage1.UseVisualStyleBackColor = true;
+            this.groceries.AllowDrop = true;
+            this.groceries.Controls.Add(this.flowLayoutPanel2);
+            this.groceries.Location = new System.Drawing.Point(4, 22);
+            this.groceries.Name = "groceries";
+            this.groceries.Padding = new System.Windows.Forms.Padding(3);
+            this.groceries.Size = new System.Drawing.Size(792, 410);
+            this.groceries.TabIndex = 0;
+            this.groceries.Text = "Groceries";
+            this.groceries.UseVisualStyleBackColor = true;
             // 
             // flowLayoutPanel2
             // 
@@ -759,16 +760,16 @@
             this.button62.Text = "View";
             this.button62.UseVisualStyleBackColor = true;
             // 
-            // tabPage2
+            // electronics
             // 
-            this.tabPage2.Controls.Add(this.flowLayoutPanel1);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(792, 410);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "tabPage2";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            this.electronics.Controls.Add(this.flowLayoutPanel1);
+            this.electronics.Location = new System.Drawing.Point(4, 22);
+            this.electronics.Name = "electronics";
+            this.electronics.Padding = new System.Windows.Forms.Padding(3);
+            this.electronics.Size = new System.Drawing.Size(792, 410);
+            this.electronics.TabIndex = 1;
+            this.electronics.Text = "Electronics";
+            this.electronics.UseVisualStyleBackColor = true;
             // 
             // flowLayoutPanel1
             // 
@@ -1257,16 +1258,16 @@
             this.button31.Text = "View";
             this.button31.UseVisualStyleBackColor = true;
             // 
-            // tabPage7
+            // homeaplience
             // 
-            this.tabPage7.Controls.Add(this.flowLayoutPanel3);
-            this.tabPage7.Location = new System.Drawing.Point(4, 22);
-            this.tabPage7.Name = "tabPage7";
-            this.tabPage7.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage7.Size = new System.Drawing.Size(792, 410);
-            this.tabPage7.TabIndex = 2;
-            this.tabPage7.Text = "tabPage7";
-            this.tabPage7.UseVisualStyleBackColor = true;
+            this.homeaplience.Controls.Add(this.flowLayoutPanel3);
+            this.homeaplience.Location = new System.Drawing.Point(4, 22);
+            this.homeaplience.Name = "homeaplience";
+            this.homeaplience.Padding = new System.Windows.Forms.Padding(3);
+            this.homeaplience.Size = new System.Drawing.Size(792, 410);
+            this.homeaplience.TabIndex = 2;
+            this.homeaplience.Text = "Home Applince";
+            this.homeaplience.UseVisualStyleBackColor = true;
             // 
             // flowLayoutPanel3
             // 
@@ -1764,7 +1765,7 @@
             this.Name = "Home";
             this.Text = "Electronics";
             this.tabControl1.ResumeLayout(false);
-            this.tabPage1.ResumeLayout(false);
+            this.groceries.ResumeLayout(false);
             this.flowLayoutPanel2.ResumeLayout(false);
             this.panel17.ResumeLayout(false);
             this.panel18.ResumeLayout(false);
@@ -1783,7 +1784,7 @@
             this.panel30.ResumeLayout(false);
             this.panel31.ResumeLayout(false);
             this.panel32.ResumeLayout(false);
-            this.tabPage2.ResumeLayout(false);
+            this.electronics.ResumeLayout(false);
             this.flowLayoutPanel1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
@@ -1802,7 +1803,7 @@
             this.panel14.ResumeLayout(false);
             this.panel15.ResumeLayout(false);
             this.panel16.ResumeLayout(false);
-            this.tabPage7.ResumeLayout(false);
+            this.homeaplience.ResumeLayout(false);
             this.flowLayoutPanel3.ResumeLayout(false);
             this.panel33.ResumeLayout(false);
             this.panel34.ResumeLayout(false);
@@ -1828,7 +1829,7 @@
         #endregion
 
         private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TabPage groceries;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
         private System.Windows.Forms.Panel panel17;
         private System.Windows.Forms.Button button2;
@@ -1881,7 +1882,7 @@
         private System.Windows.Forms.Panel panel32;
         private System.Windows.Forms.Button button61;
         private System.Windows.Forms.Button button62;
-        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.TabPage electronics;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button Addtocart;
@@ -1934,7 +1935,7 @@
         private System.Windows.Forms.Panel panel16;
         private System.Windows.Forms.Button button30;
         private System.Windows.Forms.Button button31;
-        private System.Windows.Forms.TabPage tabPage7;
+        private System.Windows.Forms.TabPage homeaplience;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel3;
         private System.Windows.Forms.Panel panel33;
         private System.Windows.Forms.Button button63;

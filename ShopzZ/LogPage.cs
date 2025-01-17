@@ -22,8 +22,9 @@ namespace AmaZon
             if(name.Text.ToString() == "admin" && password.Text.ToString() == "admin")
             {
                 this.Hide();
-                Home page = new Home();
-                page.Show();
+                HomePage page = new HomePage();
+                page.Visible = true;
+                
             }
         }
 

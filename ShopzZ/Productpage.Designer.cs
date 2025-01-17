@@ -140,6 +140,7 @@
             this.backtoHome.TabIndex = 9;
             this.backtoHome.Text = "Back";
             this.backtoHome.UseVisualStyleBackColor = false;
+            this.backtoHome.Click += new System.EventHandler(this.backtoHome_Click);
             // 
             // panel1
             // 

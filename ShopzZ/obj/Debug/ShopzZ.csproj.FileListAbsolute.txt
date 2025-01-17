@@ -18,7 +18,6 @@ E:\CODE Files\VS 2022\ShopzZ\obj\Debug\ShopzZ.csproj.AssemblyReference.cache
 E:\CODE Files\VS 2022\ShopzZ\obj\Debug\AmaZon.Admin.resources
 E:\CODE Files\VS 2022\ShopzZ\obj\Debug\AmaZon.Adminportal.resources
 E:\CODE Files\VS 2022\ShopzZ\obj\Debug\AmaZon.CreatePage.resources
-E:\CODE Files\VS 2022\ShopzZ\obj\Debug\AmaZon.Home.resources
 E:\CODE Files\VS 2022\ShopzZ\obj\Debug\AmaZon.LogPage.resources
 E:\CODE Files\VS 2022\ShopzZ\obj\Debug\AmaZon.Properties.Resources.resources
 E:\CODE Files\VS 2022\ShopzZ\obj\Debug\ShopzZ.csproj.GenerateResource.cache

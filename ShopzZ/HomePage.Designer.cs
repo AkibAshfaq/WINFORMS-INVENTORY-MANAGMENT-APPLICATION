@@ -154,6 +154,11 @@
             this.checkoutbutton = new System.Windows.Forms.Button();
             this.backfromviewcart = new System.Windows.Forms.Button();
             this.paymentpanel = new System.Windows.Forms.Panel();
+            this.backtocart = new System.Windows.Forms.Button();
+            this.cashbutton = new System.Windows.Forms.Button();
+            this.mastercardbutton = new System.Windows.Forms.Button();
+            this.visabutton = new System.Windows.Forms.Button();
+            this.proceedtopay = new System.Windows.Forms.Button();
             this.cashondelivarypanel = new System.Windows.Forms.Panel();
             this.Differentadress = new System.Windows.Forms.RadioButton();
             this.sameasshipping = new System.Windows.Forms.RadioButton();
@@ -170,11 +175,17 @@
             this.cardnumber = new System.Windows.Forms.Label();
             this.nameoncardbox = new System.Windows.Forms.TextBox();
             this.cardnumbox = new System.Windows.Forms.TextBox();
-            this.cashbutton = new System.Windows.Forms.Button();
-            this.mastercardbutton = new System.Windows.Forms.Button();
-            this.visabutton = new System.Windows.Forms.Button();
-            this.proceedtopay = new System.Windows.Forms.Button();
-            this.backtocart = new System.Windows.Forms.Button();
+            this.ProoductPanel = new System.Windows.Forms.Panel();
+            this.backtoHome = new System.Windows.Forms.Button();
+            this.description4 = new System.Windows.Forms.Label();
+            this.description3 = new System.Windows.Forms.Label();
+            this.description2 = new System.Windows.Forms.Label();
+            this.description1 = new System.Windows.Forms.Label();
+            this.productname = new System.Windows.Forms.Label();
+            this.ammounttobuy = new System.Windows.Forms.NumericUpDown();
+            this.buyitem = new System.Windows.Forms.Button();
+            this.addtocart = new System.Windows.Forms.Button();
+            this.ProductPhoto = new System.Windows.Forms.PictureBox();
             this.panel28.SuspendLayout();
             this.panel1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
@@ -214,6 +225,9 @@
             this.paymentpanel.SuspendLayout();
             this.cashondelivarypanel.SuspendLayout();
             this.cardpaypanel.SuspendLayout();
+            this.ProoductPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ammounttobuy)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ProductPhoto)).BeginInit();
             this.SuspendLayout();
             // 
             // panel28
@@ -1453,6 +1467,55 @@
             this.paymentpanel.Size = new System.Drawing.Size(750, 396);
             this.paymentpanel.TabIndex = 18;
             // 
+            // backtocart
+            // 
+            this.backtocart.Location = new System.Drawing.Point(7, 16);
+            this.backtocart.Name = "backtocart";
+            this.backtocart.Size = new System.Drawing.Size(50, 23);
+            this.backtocart.TabIndex = 20;
+            this.backtocart.Text = "Back";
+            this.backtocart.UseVisualStyleBackColor = true;
+            this.backtocart.Click += new System.EventHandler(this.backtocart_Click);
+            // 
+            // cashbutton
+            // 
+            this.cashbutton.Location = new System.Drawing.Point(460, 26);
+            this.cashbutton.Name = "cashbutton";
+            this.cashbutton.Size = new System.Drawing.Size(89, 53);
+            this.cashbutton.TabIndex = 17;
+            this.cashbutton.Text = "COD";
+            this.cashbutton.UseVisualStyleBackColor = true;
+            this.cashbutton.Click += new System.EventHandler(this.cashbutton_Click);
+            // 
+            // mastercardbutton
+            // 
+            this.mastercardbutton.Location = new System.Drawing.Point(318, 26);
+            this.mastercardbutton.Name = "mastercardbutton";
+            this.mastercardbutton.Size = new System.Drawing.Size(89, 53);
+            this.mastercardbutton.TabIndex = 15;
+            this.mastercardbutton.Text = "Master Card";
+            this.mastercardbutton.UseVisualStyleBackColor = true;
+            this.mastercardbutton.Click += new System.EventHandler(this.mastercardbutton_Click);
+            // 
+            // visabutton
+            // 
+            this.visabutton.Location = new System.Drawing.Point(187, 26);
+            this.visabutton.Name = "visabutton";
+            this.visabutton.Size = new System.Drawing.Size(89, 53);
+            this.visabutton.TabIndex = 14;
+            this.visabutton.Text = "Vise";
+            this.visabutton.UseVisualStyleBackColor = true;
+            this.visabutton.Click += new System.EventHandler(this.visabutton_Click);
+            // 
+            // proceedtopay
+            // 
+            this.proceedtopay.Location = new System.Drawing.Point(632, 342);
+            this.proceedtopay.Name = "proceedtopay";
+            this.proceedtopay.Size = new System.Drawing.Size(75, 23);
+            this.proceedtopay.TabIndex = 1;
+            this.proceedtopay.Text = "Proceed";
+            this.proceedtopay.UseVisualStyleBackColor = true;
+            // 
             // cashondelivarypanel
             // 
             this.cashondelivarypanel.Controls.Add(this.Differentadress);
@@ -1599,54 +1662,117 @@
             this.cardnumbox.Size = new System.Drawing.Size(346, 20);
             this.cardnumbox.TabIndex = 14;
             // 
-            // cashbutton
+            // ProoductPanel
             // 
-            this.cashbutton.Location = new System.Drawing.Point(460, 26);
-            this.cashbutton.Name = "cashbutton";
-            this.cashbutton.Size = new System.Drawing.Size(89, 53);
-            this.cashbutton.TabIndex = 17;
-            this.cashbutton.Text = "COD";
-            this.cashbutton.UseVisualStyleBackColor = true;
-            this.cashbutton.Click += new System.EventHandler(this.cashbutton_Click);
+            this.ProoductPanel.Controls.Add(this.backtoHome);
+            this.ProoductPanel.Controls.Add(this.description4);
+            this.ProoductPanel.Controls.Add(this.description3);
+            this.ProoductPanel.Controls.Add(this.description2);
+            this.ProoductPanel.Controls.Add(this.description1);
+            this.ProoductPanel.Controls.Add(this.productname);
+            this.ProoductPanel.Controls.Add(this.ammounttobuy);
+            this.ProoductPanel.Controls.Add(this.buyitem);
+            this.ProoductPanel.Controls.Add(this.addtocart);
+            this.ProoductPanel.Controls.Add(this.ProductPhoto);
+            this.ProoductPanel.Location = new System.Drawing.Point(42, 58);
+            this.ProoductPanel.Name = "ProoductPanel";
+            this.ProoductPanel.Size = new System.Drawing.Size(753, 396);
+            this.ProoductPanel.TabIndex = 19;
             // 
-            // mastercardbutton
+            // backtoHome
             // 
-            this.mastercardbutton.Location = new System.Drawing.Point(318, 26);
-            this.mastercardbutton.Name = "mastercardbutton";
-            this.mastercardbutton.Size = new System.Drawing.Size(89, 53);
-            this.mastercardbutton.TabIndex = 15;
-            this.mastercardbutton.Text = "Master Card";
-            this.mastercardbutton.UseVisualStyleBackColor = true;
-            this.mastercardbutton.Click += new System.EventHandler(this.mastercardbutton_Click);
+            this.backtoHome.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.backtoHome.Location = new System.Drawing.Point(687, 7);
+            this.backtoHome.Name = "backtoHome";
+            this.backtoHome.Size = new System.Drawing.Size(60, 23);
+            this.backtoHome.TabIndex = 18;
+            this.backtoHome.Text = "Back";
+            this.backtoHome.UseVisualStyleBackColor = false;
             // 
-            // visabutton
+            // description4
             // 
-            this.visabutton.Location = new System.Drawing.Point(187, 26);
-            this.visabutton.Name = "visabutton";
-            this.visabutton.Size = new System.Drawing.Size(89, 53);
-            this.visabutton.TabIndex = 14;
-            this.visabutton.Text = "Vise";
-            this.visabutton.UseVisualStyleBackColor = true;
-            this.visabutton.Click += new System.EventHandler(this.visabutton_Click);
+            this.description4.AutoSize = true;
+            this.description4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.description4.Location = new System.Drawing.Point(379, 205);
+            this.description4.Name = "description4";
+            this.description4.Size = new System.Drawing.Size(99, 20);
+            this.description4.TabIndex = 17;
+            this.description4.Text = "description 4";
             // 
-            // proceedtopay
+            // description3
             // 
-            this.proceedtopay.Location = new System.Drawing.Point(632, 342);
-            this.proceedtopay.Name = "proceedtopay";
-            this.proceedtopay.Size = new System.Drawing.Size(75, 23);
-            this.proceedtopay.TabIndex = 1;
-            this.proceedtopay.Text = "Proceed";
-            this.proceedtopay.UseVisualStyleBackColor = true;
+            this.description3.AutoSize = true;
+            this.description3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.description3.Location = new System.Drawing.Point(379, 172);
+            this.description3.Name = "description3";
+            this.description3.Size = new System.Drawing.Size(99, 20);
+            this.description3.TabIndex = 16;
+            this.description3.Text = "description 3";
             // 
-            // backtocart
+            // description2
             // 
-            this.backtocart.Location = new System.Drawing.Point(7, 16);
-            this.backtocart.Name = "backtocart";
-            this.backtocart.Size = new System.Drawing.Size(50, 23);
-            this.backtocart.TabIndex = 20;
-            this.backtocart.Text = "Back";
-            this.backtocart.UseVisualStyleBackColor = true;
-            this.backtocart.Click += new System.EventHandler(this.backtocart_Click);
+            this.description2.AutoSize = true;
+            this.description2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.description2.Location = new System.Drawing.Point(379, 138);
+            this.description2.Name = "description2";
+            this.description2.Size = new System.Drawing.Size(99, 20);
+            this.description2.TabIndex = 15;
+            this.description2.Text = "description 2";
+            // 
+            // description1
+            // 
+            this.description1.AutoSize = true;
+            this.description1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.description1.Location = new System.Drawing.Point(379, 102);
+            this.description1.Name = "description1";
+            this.description1.Size = new System.Drawing.Size(99, 20);
+            this.description1.TabIndex = 14;
+            this.description1.Text = "description 1";
+            // 
+            // productname
+            // 
+            this.productname.AutoSize = true;
+            this.productname.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.productname.Location = new System.Drawing.Point(372, 28);
+            this.productname.Name = "productname";
+            this.productname.Size = new System.Drawing.Size(332, 55);
+            this.productname.TabIndex = 13;
+            this.productname.Text = "Product Name";
+            // 
+            // ammounttobuy
+            // 
+            this.ammounttobuy.Location = new System.Drawing.Point(382, 247);
+            this.ammounttobuy.Name = "ammounttobuy";
+            this.ammounttobuy.Size = new System.Drawing.Size(48, 20);
+            this.ammounttobuy.TabIndex = 12;
+            // 
+            // buyitem
+            // 
+            this.buyitem.Location = new System.Drawing.Point(382, 334);
+            this.buyitem.Name = "buyitem";
+            this.buyitem.Size = new System.Drawing.Size(351, 35);
+            this.buyitem.TabIndex = 11;
+            this.buyitem.Text = "Buy item";
+            this.buyitem.UseVisualStyleBackColor = true;
+            // 
+            // addtocart
+            // 
+            this.addtocart.Location = new System.Drawing.Point(382, 293);
+            this.addtocart.Name = "addtocart";
+            this.addtocart.Size = new System.Drawing.Size(351, 35);
+            this.addtocart.TabIndex = 10;
+            this.addtocart.Text = "Add to cart";
+            this.addtocart.UseVisualStyleBackColor = true;
+            // 
+            // ProductPhoto
+            // 
+            this.ProductPhoto.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ProductPhoto.BackgroundImage")));
+            this.ProductPhoto.InitialImage = ((System.Drawing.Image)(resources.GetObject("ProductPhoto.InitialImage")));
+            this.ProductPhoto.Location = new System.Drawing.Point(18, 28);
+            this.ProductPhoto.Name = "ProductPhoto";
+            this.ProductPhoto.Size = new System.Drawing.Size(348, 341);
+            this.ProductPhoto.TabIndex = 9;
+            this.ProductPhoto.TabStop = false;
             // 
             // HomePage
             // 
@@ -1664,6 +1790,7 @@
             this.Controls.Add(this.homeappliencespage);
             this.Controls.Add(this.electronicspage);
             this.Controls.Add(this.viewcartpanel);
+            this.Controls.Add(this.ProoductPanel);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "HomePage";
             this.Text = "7";
@@ -1710,6 +1837,10 @@
             this.cashondelivarypanel.PerformLayout();
             this.cardpaypanel.ResumeLayout(false);
             this.cardpaypanel.PerformLayout();
+            this.ProoductPanel.ResumeLayout(false);
+            this.ProoductPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ammounttobuy)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ProductPhoto)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1862,5 +1993,16 @@
         private System.Windows.Forms.RadioButton Differentadress;
         private System.Windows.Forms.RadioButton sameasshipping;
         private System.Windows.Forms.Button backtocart;
+        public System.Windows.Forms.Panel ProoductPanel;
+        private System.Windows.Forms.Label description4;
+        private System.Windows.Forms.Label description3;
+        private System.Windows.Forms.Label description2;
+        private System.Windows.Forms.Label description1;
+        public System.Windows.Forms.Label productname;
+        private System.Windows.Forms.NumericUpDown ammounttobuy;
+        private System.Windows.Forms.Button buyitem;
+        public System.Windows.Forms.Button addtocart;
+        private System.Windows.Forms.PictureBox ProductPhoto;
+        private System.Windows.Forms.Button backtoHome;
     }
 }

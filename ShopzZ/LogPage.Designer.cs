@@ -30,7 +30,7 @@
         {
             this.password = new System.Windows.Forms.TextBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.name = new System.Windows.Forms.TextBox();
+            this.mail = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.title = new System.Windows.Forms.Label();
@@ -57,12 +57,12 @@
             this.checkBox1.Text = "Show Password";
             this.checkBox1.UseVisualStyleBackColor = true;
             // 
-            // name
+            // mail
             // 
-            this.name.Location = new System.Drawing.Point(304, 154);
-            this.name.Name = "name";
-            this.name.Size = new System.Drawing.Size(202, 20);
-            this.name.TabIndex = 6;
+            this.mail.Location = new System.Drawing.Point(304, 154);
+            this.mail.Name = "mail";
+            this.mail.Size = new System.Drawing.Size(202, 20);
+            this.mail.TabIndex = 6;
             // 
             // label1
             // 
@@ -78,9 +78,9 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(301, 138);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 13);
+            this.label2.Size = new System.Drawing.Size(32, 13);
             this.label2.TabIndex = 8;
-            this.label2.Text = "Name";
+            this.label2.Text = "Email";
             // 
             // title
             // 
@@ -133,7 +133,7 @@
             this.Controls.Add(this.title);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.name);
+            this.Controls.Add(this.mail);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.password);
             this.Name = "LogPage";
@@ -146,7 +146,7 @@
         #endregion
         private System.Windows.Forms.TextBox password;
         private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.TextBox name;
+        private System.Windows.Forms.TextBox mail;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label title;

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -17,6 +18,14 @@ namespace AmaZon
             InitializeComponent();
         }
 
+        SqlConnection connection;
+        public void DBconnection()
+        {
+            connection = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"E:\\CODE Files\\VS 2022\\ShopzZ\\DB\\DemoDB.mdf\";Integrated Security=True;Connect Timeout=30;Encrypt=false");
+            connection.Open();
+        }
+
+        public int id = 1;
         
         private void createaccount_Click(object sender, EventArgs e)
         {
@@ -26,16 +35,37 @@ namespace AmaZon
             string Password = createpassword.Text.ToString();
             string retype = retypepassword.Text.ToString();
 
-            if (false)   
+            if (Password == retype)
             {
-                MessageBox.Show("Information missing\n All information is required to account creation");
+                id++;
+                DBconnection();
+                SqlCommand saveUser = new SqlCommand("insert into UserTable(user_id,user_name,user_mail,user_gender,user_pass) values(@id,@name,@mail,@gender,@pass)", connection);
+                saveUser.Parameters.AddWithValue("@id", id);
+                saveUser.Parameters.AddWithValue("@name",name.Text);
+                saveUser.Parameters.AddWithValue("@mail",email.Text);
+                saveUser.Parameters.AddWithValue("@gender",gender.Text);
+                saveUser.Parameters.AddWithValue("@pass",createpassword.Text);
+                saveUser.ExecuteNonQuery();
+                connection.Close();
+                MessageBox.Show("Account created");
+
+                this.Hide();
+                HomePage page = new HomePage();
+                page.Visible = true;
             }
-            else if(Password != retype)
+            else
             {
-                MessageBox.Show("Password Incorrect");
+                MessageBox.Show("Retry");
             }
 
-            string querey;
+            
+        }
+
+        private void backtologin_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            LogPage l = new LogPage();
+            l.Show();
         }
     }
 }

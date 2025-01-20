@@ -27,6 +27,16 @@ namespace AmaZon
             paymentpanel.Visible = false;
         }
 
+        //Array for adding item
+        public string itemarray; 
+
+        public void view(int id)
+        {
+
+
+        }
+
+
         public bool panalsize = false;
         private void button3_Click(object sender, EventArgs e)
         {
@@ -282,5 +292,14 @@ namespace AmaZon
             LogPage logPage = new LogPage();
             logPage.Visible = true;
         }
+
+
+
+
+
+
+
+
+
     }
 }

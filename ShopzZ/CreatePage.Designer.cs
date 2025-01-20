@@ -41,6 +41,7 @@
             this.retypepassword = new System.Windows.Forms.TextBox();
             this.retypepasswordlabel = new System.Windows.Forms.Label();
             this.genderlabel = new System.Windows.Forms.Label();
+            this.backtologin = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // title
@@ -157,11 +158,22 @@
             this.genderlabel.TabIndex = 23;
             this.genderlabel.Text = "Gender";
             // 
+            // backtologin
+            // 
+            this.backtologin.Location = new System.Drawing.Point(12, 12);
+            this.backtologin.Name = "backtologin";
+            this.backtologin.Size = new System.Drawing.Size(75, 23);
+            this.backtologin.TabIndex = 24;
+            this.backtologin.Text = "Back";
+            this.backtologin.UseVisualStyleBackColor = true;
+            this.backtologin.Click += new System.EventHandler(this.backtologin_Click);
+            // 
             // CreatePage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.backtologin);
             this.Controls.Add(this.genderlabel);
             this.Controls.Add(this.retypepasswordlabel);
             this.Controls.Add(this.retypepassword);
@@ -197,5 +209,6 @@
         private System.Windows.Forms.TextBox retypepassword;
         private System.Windows.Forms.Label retypepasswordlabel;
         private System.Windows.Forms.Label genderlabel;
+        private System.Windows.Forms.Button backtologin;
     }
 }

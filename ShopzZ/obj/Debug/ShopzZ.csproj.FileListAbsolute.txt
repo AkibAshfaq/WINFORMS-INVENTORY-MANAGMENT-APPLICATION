@@ -24,5 +24,5 @@ E:\CODE Files\VS 2022\ShopzZ\obj\Debug\ShopzZ.csproj.GenerateResource.cache
 E:\CODE Files\VS 2022\ShopzZ\obj\Debug\ShopzZ.csproj.CoreCompileInputs.cache
 E:\CODE Files\VS 2022\ShopzZ\obj\Debug\AmaZon.exe
 E:\CODE Files\VS 2022\ShopzZ\obj\Debug\AmaZon.pdb
-E:\CODE Files\VS 2022\ShopzZ\obj\Debug\AmaZon.Productpage.resources
 E:\CODE Files\VS 2022\ShopzZ\obj\Debug\AmaZon.HomePage.resources
+E:\CODE Files\VS 2022\ShopzZ\obj\Debug\AmaZon.HR.resources

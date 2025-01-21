@@ -33,7 +33,7 @@
             this.mail = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.title = new System.Windows.Forms.Label();
+            this.ShopzZtitle = new System.Windows.Forms.Label();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.login = new System.Windows.Forms.Button();
             this.createaccount = new System.Windows.Forms.Button();
@@ -82,15 +82,15 @@
             this.label2.TabIndex = 8;
             this.label2.Text = "Email";
             // 
-            // title
+            // ShopzZtitle
             // 
-            this.title.AutoSize = true;
-            this.title.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.title.Location = new System.Drawing.Point(300, 59);
-            this.title.Name = "title";
-            this.title.Size = new System.Drawing.Size(206, 55);
-            this.title.TabIndex = 9;
-            this.title.Text = "AmaZon";
+            this.ShopzZtitle.AutoSize = true;
+            this.ShopzZtitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ShopzZtitle.Location = new System.Drawing.Point(300, 59);
+            this.ShopzZtitle.Name = "ShopzZtitle";
+            this.ShopzZtitle.Size = new System.Drawing.Size(190, 55);
+            this.ShopzZtitle.TabIndex = 9;
+            this.ShopzZtitle.Text = "ShopzZ";
             // 
             // login
             // 
@@ -130,7 +130,7 @@
             this.Controls.Add(this.adminbutton);
             this.Controls.Add(this.createaccount);
             this.Controls.Add(this.login);
-            this.Controls.Add(this.title);
+            this.Controls.Add(this.ShopzZtitle);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.mail);
@@ -149,7 +149,7 @@
         private System.Windows.Forms.TextBox mail;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label title;
+        private System.Windows.Forms.Label ShopzZtitle;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.Button login;
         private System.Windows.Forms.Button createaccount;

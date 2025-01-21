@@ -1781,7 +1781,6 @@
             this.ClientSize = new System.Drawing.Size(795, 454);
             this.Controls.Add(this.panel28);
             this.Controls.Add(this.flowLayoutPanel1);
-            this.Controls.Add(this.paymentpanel);
             this.Controls.Add(this.userinfo);
             this.Controls.Add(this.contactpanel);
             this.Controls.Add(this.homepagepanel);
@@ -1791,6 +1790,7 @@
             this.Controls.Add(this.electronicspage);
             this.Controls.Add(this.viewcartpanel);
             this.Controls.Add(this.ProoductPanel);
+            this.Controls.Add(this.paymentpanel);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "HomePage";
             this.Text = "7";

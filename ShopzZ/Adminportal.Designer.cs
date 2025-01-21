@@ -31,10 +31,9 @@
             this.title = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.name = new System.Windows.Forms.TextBox();
+            this.mail = new System.Windows.Forms.TextBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.password = new System.Windows.Forms.TextBox();
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.admintouser = new System.Windows.Forms.Button();
             this.login = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -45,9 +44,9 @@
             this.title.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.title.Location = new System.Drawing.Point(158, 44);
             this.title.Name = "title";
-            this.title.Size = new System.Drawing.Size(493, 55);
+            this.title.Size = new System.Drawing.Size(477, 55);
             this.title.TabIndex = 22;
-            this.title.Text = "AmaZon Admin Portal";
+            this.title.Text = "ShopzZ Admin Portal";
             // 
             // label2
             // 
@@ -67,12 +66,12 @@
             this.label1.TabIndex = 20;
             this.label1.Text = "Password";
             // 
-            // name
+            // mail
             // 
-            this.name.Location = new System.Drawing.Point(304, 155);
-            this.name.Name = "name";
-            this.name.Size = new System.Drawing.Size(202, 20);
-            this.name.TabIndex = 19;
+            this.mail.Location = new System.Drawing.Point(304, 155);
+            this.mail.Name = "mail";
+            this.mail.Size = new System.Drawing.Size(202, 20);
+            this.mail.TabIndex = 19;
             // 
             // checkBox1
             // 
@@ -119,7 +118,7 @@
             this.Controls.Add(this.title);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.name);
+            this.Controls.Add(this.mail);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.password);
             this.Controls.Add(this.admintouser);
@@ -136,10 +135,9 @@
         private System.Windows.Forms.Label title;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox name;
+        private System.Windows.Forms.TextBox mail;
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.TextBox password;
-        private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.Button admintouser;
         private System.Windows.Forms.Button login;
     }

@@ -1,14 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
-using System.Data.SqlTypes;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace AmaZon
 {
@@ -28,21 +22,24 @@ namespace AmaZon
         private void login_Click(object sender, EventArgs e)
         {
             DBconnection();
-            SqlCommand sqlCommand2 = new SqlCommand("SELECT * from UserTable WHERE  user_mail = @email and user_pass = @password", connection);
+            SqlCommand sqlCommand2 = new SqlCommand("SELECT * from UserTable WHERE User_mail = @email and User_pass = @password", connection);
             sqlCommand2.Parameters.AddWithValue("@email", mail.Text);
             sqlCommand2.Parameters.AddWithValue("@password", password.Text);
             DataTable dtbl = new DataTable();
-
-            SqlDataAdapter sqlsda = new SqlDataAdapter(sqlCommand2);
-            sqlsda.Fill(dtbl);
-
-
+            SqlDataReader sdr = sqlCommand2.ExecuteReader();
+            dtbl.Load(sdr);
 
             if (dtbl.Rows.Count == 1)
             {
+                SqlCommand saveid = new SqlCommand("select UID_number from usertable where user_mail = @email and user_pass = @password", connection);
+                saveid.Parameters.AddWithValue("@email", mail.Text);
+                saveid.Parameters.AddWithValue("@password", password.Text);
+                int idnum = Convert.ToInt32(saveid.ExecuteScalar());
+                connection.Close();
                 this.Hide();
                 HomePage page = new HomePage();
                 page.Visible = true;
+                page.userid = idnum;
 
             }
             else
@@ -62,7 +59,9 @@ namespace AmaZon
 
         private void adminbutton_Click(object sender, EventArgs e)
         {
-            
+            this.Hide();
+            Adminportal adminportal = new Adminportal();
+            adminportal.Visible = true;
         }
     }
 }

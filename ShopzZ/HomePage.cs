@@ -2,12 +2,14 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Web;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace AmaZon
 {
@@ -27,8 +29,17 @@ namespace AmaZon
             paymentpanel.Visible = false;
         }
 
+        public int userid;
         //Array for adding item
-        public string itemarray; 
+        public string itemarray;
+
+
+        SqlConnection connection;
+        public void DBconnection()
+        {
+            connection = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"E:\\CODE Files\\VS 2022\\ShopzZ\\DB\\DemoDB.mdf\";Integrated Security=True;Connect Timeout=30;Encrypt=false");
+            connection.Open();
+        }
 
         public void view(int id)
         {
@@ -142,6 +153,7 @@ namespace AmaZon
             paymentpanel.Visible = false;
         }
 
+        // profile info sho panel
         private void Profile_Click(object sender, EventArgs e)
         {
             homepagepanel.Visible = false;
@@ -153,7 +165,24 @@ namespace AmaZon
             contactpanel.Visible = false;
             viewcartpanel.Visible = false;
             paymentpanel.Visible = false;
+
+            DBconnection();
+            SqlCommand profileinformation = new SqlCommand("select * from usertable where UID_number = @num",connection);
+            profileinformation.Parameters.AddWithValue("@num",userid);
+            SqlDataReader reader = profileinformation.ExecuteReader();
+            while (reader.Read())
+            {
+                namebox.Text = Convert.ToString(reader.GetValue(2));
+                mailbox.Text = Convert.ToString(reader.GetValue(3));
+                genderbox.Text = Convert.ToString(reader.GetValue(4));
+                adressbox.Text = Convert.ToString(reader.GetValue(6) + " " + reader.GetValue(5));
+                countrybox.Text = Convert.ToString(reader.GetValue(5));
+                statebox.Text = Convert.ToString(reader.GetValue(6));
+            }
+            connection.Close();
         }
+
+
 
         private void contactbutton_Click(object sender, EventArgs e)
         {
@@ -194,12 +223,36 @@ namespace AmaZon
             string currpass = currentpassbox.Text;
             string gender = genderbox.Text;
             string country = countrybox.Text;
-            string adress = adressbox.Text;
+            string city = statebox.Text;
 
-            if(newpass != confirmpass)
+            DBconnection();
+            SqlCommand saveid = new SqlCommand("select user_pass from usertable where UID_number = @num", connection);
+            saveid.Parameters.AddWithValue("@num", userid);
+            string idpass = Convert.ToString(saveid.ExecuteScalarAsync());
+
+            if (newpass == confirmpass)
             {
-                
+                if (idpass == currpass) 
+                {
+                    SqlCommand saveUser = new SqlCommand("update usertable set user_name = @name , user_mail = @mail, user_gender = @gender, user_pass = @pass, user_adress_country = @country, user_adress_city = @city ", connection);
+                    saveUser.Parameters.AddWithValue("@name", name);
+                    saveUser.Parameters.AddWithValue("@mail", mail);
+                    saveUser.Parameters.AddWithValue("@gender", gender);
+                    saveUser.Parameters.AddWithValue("@pass", newpass);
+                    saveUser.Parameters.AddWithValue("@country", country);
+                    saveUser.Parameters.AddWithValue("@city", city);
+                    saveUser.ExecuteNonQuery();
+                }
+                else
+                {
+                    MessageBox.Show("Current password doesn't match");
+                }
             }
+            else
+            {
+                MessageBox.Show("New password doesn't match");
+            }
+            connection.Close();
         }
 
         private void checkoutbutton_Click(object sender, EventArgs e)

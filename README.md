@@ -1,3 +1,9 @@
+
+# 🏷️ WINFORMS-INVENTORY-MANAGMENT-APPLICATION  
+*A lightweight, educational Inventory Management System built with C# WinForms*
+
+---
+
 <div align="center">
 
 <!-- 🔹 Project Screenshots (Auto Adjustable) -->
@@ -15,10 +21,6 @@
 
 ---
 
-# 🏷️ WINFORMS-INVENTORY-MANAGMENT-APPLICATION  
-*A lightweight, educational Inventory Management System built with C# WinForms*
-
----
 
 ## 📋 Table of Contents  
 - [About](#about)  

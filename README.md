@@ -2,10 +2,10 @@
 
 <!-- 🔹 Project Screenshots (Auto Adjustable) -->
 <img src="ShopzZ/ProjectPhoto/CustomerLogin.png" alt="Customer Login" width="45%"/>
+
+<img src="ShopzZ/ProjectPhoto/CustomerHome.png" alt="Customer Home" width="45%"/>
 <br/>
-<img src="ShopzZ/ProjectPhoto/CustomerHome.png" alt="Customer Home" width="45%"/> 
 <img src="ShopzZ/ProjectPhoto/AddToCart.png" alt="Add to cart" width="20%"/>
-<br/>
 <img src="ShopzZ/ProjectPhoto/Cart.png" alt="Cart" width="20%"/>
 <img src="ShopzZ/ProjectPhoto/ChoosePayment.png" alt="Choose Payment" width="20%"/>
 <img src="ShopzZ/ProjectPhoto/adminLogin.png" alt="Admin Login" width="20%"/>
